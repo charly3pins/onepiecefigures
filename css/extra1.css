@@ -1,0 +1,13 @@
+@media screen and (max-width: 650px) {
+	.og-fullimg {
+		display: block !important;
+	}
+	.og-details {
+		float: left !important;
+		width: 50% !important;
+	}
+}
+
+.og-details h3 {
+	padding: 0px !important;
+}
