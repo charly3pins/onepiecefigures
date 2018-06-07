@@ -1,7 +1,6 @@
-baseurl = "https://charly3pins.github.io/onepiecefigures/"
+baseURL = "https://charly3pins.github.io/onepiecefigures/"
 DefaultContentLanguage = "en"
 title = "Portrait of Pirates - The final guide of figures"
-theme = "beautifulhugo"
 metaDataFormat = "yaml"
 pygmentsStyle = "trac"
 pygmentsUseClasses = true
