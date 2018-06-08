@@ -9,7 +9,7 @@ metaDataFormat = "yaml"
   homeTitle = " "
   #subtitle = "Build a beautiful and simple website in minutes"
   #logo = "img/avatar-icon.png"
-  favicon = "favicon.ico"
+  favicon = "images/favicon.ico"
   dateFormat = "January 2, 2006"
   rss = true
   comments = true
@@ -30,7 +30,7 @@ metaDataFormat = "yaml"
 #  src = "img/hexagon.jpg"
 #  desc = "Hexagon"
 [[Params.bigimg]]
-  src = "home.png"
+  src = "images/home.png"
 
 [Author]
   name = "Charly3Pins & ucles83"
