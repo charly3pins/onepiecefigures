@@ -9,14 +9,5 @@
 	<atom:link href="https://charly3pins.github.io/onepiecefigures/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
-    <item>
-      <title>Figure</title>
-      <link>https://charly3pins.github.io/onepiecefigures/categories/figure/</link>
-      <pubDate>Fri, 05 Jan 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://charly3pins.github.io/onepiecefigures/categories/figure/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>
