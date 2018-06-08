@@ -2,12 +2,6 @@ baseURL = "https://charly3pins.github.io/onepiecefigures/"
 DefaultContentLanguage = "en"
 title = "Portrait of Pirates - The final guide of figures"
 metaDataFormat = "yaml"
-pygmentsStyle = "trac"
-pygmentsUseClasses = true
-pygmentsCodeFences = true
-pygmentsCodefencesGuessSyntax = true
-#pygmentsUseClassic = true
-#pygmentOptions = "linenos=inline"
 #disqusShortname = "XXX"
 #googleAnalytics = "XXX"
 
@@ -17,15 +11,13 @@ pygmentsCodefencesGuessSyntax = true
   #logo = "img/avatar-icon.png"
   favicon = "favicon.ico"
   dateFormat = "January 2, 2006"
-  commit = false
   rss = true
   comments = true
   readingTime = true
-  useHLJS = true
-  socialShare = false
+  socialShare = true
 #  gcse = "012345678901234567890:abcdefghijk" # Get your code from google.com/cse. Make sure to go to "Look and Feel" and change Layout to "Full Width" and Theme to "Classic"
   # Preview container button text
-  buttontext = "View figure details"
+  posterbuttontext = "View figure details"
 
 #[[Params.bigimg]]
 #  src = "img/triangle.jpg"
