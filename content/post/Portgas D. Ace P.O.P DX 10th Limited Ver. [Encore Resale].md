@@ -1,9 +1,5 @@
 +++
-banner = ""
-categories = ["figure"]
-date = "2018-01-05T00:00:00Z"
-description = ""
-images = []
+date = "2018-01-05"
 tags = ["onepiece", "portrait of pirates", "Yuuki Ishiyama"]
 title = "Portgas D. Ace P.O.P DX 10th Limited Ver. [Encore Resale]"
 +++

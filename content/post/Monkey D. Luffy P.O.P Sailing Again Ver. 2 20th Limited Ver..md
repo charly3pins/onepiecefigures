@@ -1,9 +1,5 @@
 +++
-banner = ""
-categories = ["figure"]
-date = "2018-01-05T00:00:00Z"
-description = ""
-images = []
+date = "2018-01-05"
 tags = ["onepiece", "portrait of pirates", "Arai Kyousuke"]
 title = "Monkey D. Luffy P.O.P Sailing Again Ver. 2 20th Limited Ver."
 +++

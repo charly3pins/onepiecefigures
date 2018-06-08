@@ -1,9 +1,5 @@
 +++
-banner = ""
-categories = ["figure"]
-date = "2018-01-05T00:00:00Z"
-description = ""
-images = []
+date = "2018-01-05"
 tags = ["onepiece", "portrait of pirates", "Layup"]
 title = "Sanji P.O.P Original Series II"
 

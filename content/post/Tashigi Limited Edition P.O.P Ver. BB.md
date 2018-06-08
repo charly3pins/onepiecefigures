@@ -1,9 +1,5 @@
 +++
-banner = ""
-categories = ["figure"]
-date = "2018-01-05T00:00:00Z"
-description = ""
-images = []
+date = "2018-01-05"
 tags = ["onepiece", "portrait of pirates", "Inada Masaki"]
 title = "Tashigi Limited Edition P.O.P Ver. BB"
 

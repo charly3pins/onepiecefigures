@@ -1,6 +1,5 @@
 +++
 date = "2018-01-05"
-images = []
 tags = ["onepiece", "portrait of pirates", "Fukuda Takashi"]
 title = "Akainu (Sakazuki) P.O.P DX"
 +++

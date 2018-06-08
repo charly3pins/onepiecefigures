@@ -1,10 +1,6 @@
 +++
-banner = ""
-categories = ["figure"]
-date = "2018-01-05T00:00:00Z"
-description = ""
-images = []
-tags = ["onepiece", "portrait of pirates", ""]
+date = "2018-01-05"
+tags = ["onepiece", "portrait of pirates"]
 title = "Nojiko P.O.P CBR2"
 +++
 

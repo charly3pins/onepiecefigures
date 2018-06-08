@@ -1,9 +1,5 @@
 +++
-banner = ""
-categories = ["figure"]
-date = "2018-01-05T00:00:00Z"
-description = ""
-images = []
+date = "2018-01-05"
 tags = ["onepiece", "portrait of pirates", "Jyango/Andou Kenji"]
 title = "Perhona P.O.P CB-EX [GOTHIC] + Bonus Photo Card"
 
