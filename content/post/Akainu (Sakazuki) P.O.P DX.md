@@ -24,4 +24,7 @@ title = "Akainu (Sakazuki) P.O.P DX"
 
 **Box size:** 32.0 x 28.0 x 17.5 (cm)
 
-![](/uploads/2018/05/21/akainu pop.jpg)
+{{< gallery caption-effect="fade" >}}
+	{{< figure thumb="-thumb" link="/onepiecefigures/images/Akainu/Akainu.jpg" >}}
+	{{< figure link="/onepiecefigures/images/Akainu/Akainu.jpg" >}}
+{{< /gallery >}}
