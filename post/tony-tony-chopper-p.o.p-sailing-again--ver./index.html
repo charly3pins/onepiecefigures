@@ -805,3 +805,27 @@ Release date: …">
 
 </html>
 
+  : function() {
+						this.$previewEl.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+						this.$item.css( 'transition', 'height ' + settings.speed + 'ms ' + settings.easing );
+					},
+					getEl : function() {
+						return this.$previewEl;
+					}
+				}
+
+				return { 
+					init : init,
+					addItems : addItems
+				};
+
+			})();
+		</script>
+		<script>
+			$(function() {
+				Grid.init();
+			});
+		</script>
+
+</html>
+
