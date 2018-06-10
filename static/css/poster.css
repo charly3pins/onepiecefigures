@@ -8,17 +8,93 @@
 
 .og-grid li {
 	display: inline-block;
-	margin: 10px 5px 0 5px;
+	margin: 10px 5px 10px 5px;
 	vertical-align: top;
-	height: 250px;
+	height: 300px;
 }
 
 .og-grid li > a,
-.og-grid li > a img {
+.og-grid li > a img,
+.og-grid li > div {
 	border: none;
 	outline: none;
 	display: block;
 	position: relative;
+}
+
+div.item-footer {
+	float: left;
+	width: 100%;
+	padding: 5px;
+	height: 60px;
+}
+
+.original-series {
+	background-color: #00CCFF;
+}
+
+.neo {
+	background-color: #99FF99;
+}
+
+.neo-ex {
+	background-color: #FFFFCC;
+}
+
+.neo-dx, .limited-lawson {
+	background-color: #CCCCCC;
+}
+
+.cb {
+	background-color: #FF99FF;
+}
+
+.mugiwara-theater {
+	background-color: #66FFCC;
+}
+
+.strong-edition, .strong-edition-limited-lawson {
+	background-color: #FF6666;
+}
+
+.stuffed-collection {
+	background-color: #CC9900;
+}
+
+.limited-edition {
+	background-color: #FF6600;	
+}
+
+.sailing-again {
+	background-color: #FFCC00;
+}
+
+.maximum {
+	background-color: #FF66FF;
+}
+
+.edition-z {
+	background-color: #FF0000;
+	color: #FFFFFF;
+}
+
+.mas {
+	background-color: #3366FF;
+	color: #FFFFFF;
+}
+
+.kabuki-edition {
+	background-color: #000000;
+	color: #FFFFFF;
+}
+
+.iro {
+	background-color: #FF9999;
+}
+
+.soc {
+	background-color: #CFB53B;
+	color: #FFFFFF;
 }
 
 .og-grid li.og-expanded > a::after {
