@@ -720,8 +720,7 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
   line-height: normal;
 }
 
-/* OVERRIDE POSTER CSS */
-
+/* Show poster detail images in mobile devices
 @media screen and (max-width: 650px) {
   .og-fullimg {
     display: block !important;
@@ -735,3 +734,4 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
 .og-details h3 {
   padding: 0px !important;
 }
+*/

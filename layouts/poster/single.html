@@ -8,7 +8,7 @@
           {{ range $.Site.Data.items.items }}
           <li>
             <a href="{{$.Site.BaseURL}}{{.url}}" data-largesrc="{{.image}}" data-title="{{.title}}" data-description="{{.description }}" data-buttontext="{{.buttontext}}">
-              <img src="{{.thumb}}" alt="{{.alt}}"/>
+              <img src="{{.thumb}}" alt="{{.alt}}" style="height: 250px; width: auto;"/>
             </a>
           </li>
           {{ end }}
