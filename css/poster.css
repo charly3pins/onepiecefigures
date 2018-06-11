@@ -1,70 +1,93 @@
-.original-series {
+.card:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.original-series, 
+.card:hover .original-series-hover {
 	background-color: #00CCFF;
 }
 
-.neo {
+.neo , 
+.card:hover .neo-hover {
 	background-color: #99FF99;
 }
 
-.neo-ex {
+.neo-ex, 
+.card:hover .neo-ex-hover {
 	background-color: #FFFFCC;
 }
 
-.neo-dx, .limited-lawson {
+.neo-dx, .limited-lawson, 
+.card:hover .neo-dx-hover,
+.card:hover .limited-lawson {
 	background-color: #CCCCCC;
 }
 
-.cb {
+.cb, 
+.card:hover .cb-hover {
 	background-color: #FF99FF;
 }
 
-.mugiwara-theater {
+.mugiwara-theater, 
+.card:hover .mugiwara-theater-hover {
 	background-color: #66FFCC;
 }
 
-.strong-edition, .strong-edition-limited-lawson {
+.strong-edition, .strong-edition-limited-lawson, 
+.card:hover .strong-edition-hover,
+.card:hover .strong-edition-limited-lawson {
 	background-color: #FF6666;
   color: #FFFFFF;
 }
 
-.stuffed-collection {
+.stuffed-collection, 
+.card:hover ..stuffed-collection-hover {
 	background-color: #CC9900;
   color: #FFFFFF;
 }
 
-.limited-edition {
+.limited-edition, 
+.card:hover .limited-edition-hover {
 	background-color: #FF6600;
   color: #FFFFFF;
 }
 
-.sailing-again {
+.sailing-again, 
+.card:hover .sailing-again-hover {
 	background-color: #FFCC00;
 }
 
-.maximum {
+.maximum, 
+.card:hover .maximum-hover {
 	background-color: #FF66FF;
 }
 
-.edition-z {
+.edition-z, 
+.card:hover .edition-z-hover {
 	background-color: #FF0000;
 	color: #FFFFFF;
 }
 
-.mas {
+.mas, 
+.card:hover .mas-hover {
 	background-color: #3366FF;
 	color: #FFFFFF;
 }
 
-.kabuki-edition {
+.kabuki-edition, 
+.card:hover .kabuki-edition-hover {
 	background-color: #000000;
 	color: #FFFFFF;
 }
 
-.iro {
+.iro, 
+.card:hover .iro-hover {
 	background-color: #FF9999;
 }
 
-.soc {
+.soc, 
+.card:hover .soc-hover {
 	background-color: #CFB53B;
 	color: #FFFFFF;
 }
@@ -89,11 +112,6 @@
   .card {
     width: 100%;
   }
-}
-.card:hover .card__inner {
-  background-color: #1abc9c;
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
 }
 .card__inner {
   width: 100%;
