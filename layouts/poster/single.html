@@ -7,7 +7,7 @@
         <div class="cards">
           {{ range $i, $item := $.Site.Data.items.items }}
             <div class=" card [ is-collapsed ] ">
-              <div class="card__inner [ js-expander ]">
+              <div class="card__inner [ js-expander ] {{.class}}-hover">
                 <img src="{{.thumb}}" alt="{{.alt}}" style="height: 250px; width: auto;"/>
                 <div class="item-footer {{.class}}">
                   #{{.number}}
