@@ -24,14 +24,17 @@
 
 .strong-edition, .strong-edition-limited-lawson {
 	background-color: #FF6666;
+  color: #FFFFFF;
 }
 
 .stuffed-collection {
 	background-color: #CC9900;
+  color: #FFFFFF;
 }
 
 .limited-edition {
-	background-color: #FF6600;	
+	background-color: #FF6600;
+  color: #FFFFFF;
 }
 
 .sailing-again {
@@ -100,7 +103,7 @@
   /*background-color: #949fb0;*/
   /*color: #eceef1;*/
   font-size: 1.5em;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   text-align: center;
   transition: all 0.2s ease-in-out;
 }
