@@ -42,7 +42,7 @@
 }
 
 .stuffed-collection, 
-.card:hover ..stuffed-collection-hover {
+.card:hover .stuffed-collection-hover {
 	background-color: #CC9900;
   color: #FFFFFF;
 }
