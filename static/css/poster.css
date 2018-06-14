@@ -20,7 +20,7 @@
 
 .neo-dx, .limited-lawson, 
 .card:hover .neo-dx-hover,
-.card:hover .limited-lawson {
+.card:hover .limited-lawson-hover {
 	background-color: #c4c3c5;
 }
 
@@ -34,10 +34,9 @@
 	background-color: #77eedc;
 }
 
-.strong-edition, .strong-edition-limited-lawson, .limited-lawson
+.strong-edition, .strong-edition-limited-lawson
 .card:hover .strong-edition-hover,
-.card:hover .strong-edition-limited-lawson,
-.card:hover .limited-lawson-hover {
+.card:hover .strong-edition-limited-lawson {
 	background-color: #fd636e;
   color: #FFFFFF;
 }
