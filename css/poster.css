@@ -5,73 +5,73 @@
 
 .original-series, 
 .card:hover .original-series-hover {
-	background-color: #00CCFF;
+	background-color: #a8d9f3;
 }
 
 .neo , 
 .card:hover .neo-hover {
-	background-color: #99FF99;
+	background-color: #c0dc94;
 }
 
 .neo-ex, 
 .card:hover .neo-ex-hover {
-	background-color: #FFFFCC;
+	background-color: #f2f3a8;
 }
 
 .neo-dx, .limited-lawson, 
 .card:hover .neo-dx-hover,
 .card:hover .limited-lawson {
-	background-color: #CCCCCC;
+	background-color: #c4c3c5;
 }
 
 .cb, 
 .card:hover .cb-hover {
-	background-color: #FF99FF;
+	background-color: #eba2b8;
 }
 
 .mugiwara-theater, 
 .card:hover .mugiwara-theater-hover {
-	background-color: #66FFCC;
+	background-color: #77eedc;
 }
 
 .strong-edition, .strong-edition-limited-lawson, 
 .card:hover .strong-edition-hover,
 .card:hover .strong-edition-limited-lawson {
-	background-color: #FF6666;
+	background-color: #fd636e;
   color: #FFFFFF;
 }
 
 .stuffed-collection, 
 .card:hover .stuffed-collection-hover {
-	background-color: #CC9900;
+	background-color: #cdd573;
   color: #FFFFFF;
 }
 
 .limited-edition, 
 .card:hover .limited-edition-hover {
-	background-color: #FF6600;
+	background-color: #fb8b1f;
   color: #FFFFFF;
 }
 
 .sailing-again, 
 .card:hover .sailing-again-hover {
-	background-color: #FFCC00;
+	background-color: #e8c46e;
 }
 
 .maximum, 
 .card:hover .maximum-hover {
-	background-color: #FF66FF;
+	background-color: #ff5bfd;
 }
 
 .edition-z, 
 .card:hover .edition-z-hover {
-	background-color: #FF0000;
+	background-color: #fd0404;
 	color: #FFFFFF;
 }
 
 .mas, 
 .card:hover .mas-hover {
-	background-color: #3366FF;
+	background-color: #355ffd;
 	color: #FFFFFF;
 }
 
@@ -83,12 +83,12 @@
 
 .iro, 
 .card:hover .iro-hover {
-	background-color: #FF9999;
+	background-color: #b27a7a;
 }
 
 .soc, 
 .card:hover .soc-hover {
-	background-color: #CFB53B;
+	background-color: #b69f1e;
 	color: #FFFFFF;
 }
 
