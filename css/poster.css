@@ -34,9 +34,10 @@
 	background-color: #77eedc;
 }
 
-.strong-edition, .strong-edition-limited-lawson, 
+.strong-edition, .strong-edition-limited-lawson, .limited-lawson
 .card:hover .strong-edition-hover,
-.card:hover .strong-edition-limited-lawson {
+.card:hover .strong-edition-limited-lawson,
+.card:hover .limited-lawson-hover {
 	background-color: #fd636e;
   color: #FFFFFF;
 }
