@@ -4,90 +4,108 @@
 }
 
 .original-series, 
-.card:hover .original-series-hover {
+.card:hover .original-series-hover,
+.card.is-expanded .card__inner.original-series-hover {
 	background-color: #a8d9f3;
 }
 
 .neo , 
-.card:hover .neo-hover {
+.card:hover .neo-hover,
+.card.is-expanded .card__inner.neo-hover {
 	background-color: #c0dc94;
 }
 
 .neo-ex, 
-.card:hover .neo-ex-hover {
+.card:hover .neo-ex-hover,
+.card.is-expanded .card__inner.neo-ex-hover {
 	background-color: #f2f3a8;
 }
 
 .neo-dx, .limited-lawson, 
 .card:hover .neo-dx-hover,
-.card:hover .limited-lawson-hover {
+.card:hover .limited-lawson-hover,
+.card.is-expanded .card__inner.neo-dx-hover,
+.card.is-expanded .card__inner.limited-lawson-hover {
 	background-color: #c4c3c5;
 }
 
 .cb, 
-.card:hover .cb-hover {
+.card:hover .cb-hover,
+.card.is-expanded .card__inner.cb-hover {
 	background-color: #eba2b8;
 }
 
 .mugiwara-theater, 
-.card:hover .mugiwara-theater-hover {
+.card:hover .mugiwara-theater-hover,
+.card.is-expanded .card__inner.mugiwara-theater-hover {
 	background-color: #77eedc;
 }
 
 .strong-edition, .strong-edition-limited-lawson,
 .card:hover .strong-edition-hover,
-.card:hover .strong-edition-limited-lawson {
+.card:hover .strong-edition-limited-lawson,
+.card.is-expanded .card__inner.strong-edition-limited-lawson-hover,
+.card.is-expanded .card__inner.strong-edition-hover {
 	background-color: #fd636e;
   color: #FFFFFF;
 }
 
 .stuffed-collection, 
-.card:hover .stuffed-collection-hover {
+.card:hover .stuffed-collection-hover,
+.card.is-expanded .card__inner.stuffed-collection-hover {
 	background-color: #cdd573;
   color: #FFFFFF;
 }
 
 .limited-edition, 
-.card:hover .limited-edition-hover {
+.card:hover .limited-edition-hover,
+.card.is-expanded .card__inner.limited-edition-hover {
 	background-color: #fb8b1f;
   color: #FFFFFF;
 }
 
 .sailing-again, 
-.card:hover .sailing-again-hover {
+.card:hover .sailing-again-hover,
+.card.is-expanded .card__inner.sailing-again-hover {
 	background-color: #e8c46e;
 }
 
 .maximum, 
-.card:hover .maximum-hover {
+.card:hover .maximum-hover,
+.card.is-expanded .card__inner.maximum-hover {
 	background-color: #ff5bfd;
 }
 
 .edition-z, 
-.card:hover .edition-z-hover {
+.card:hover .edition-z-hover,
+.card.is-expanded .card__inner.edition-z-hover {
 	background-color: #fd0404;
 	color: #FFFFFF;
 }
 
 .mas, 
-.card:hover .mas-hover {
+.card:hover .mas-hover,
+.card.is-expanded .card__inner.mas-hover {
 	background-color: #355ffd;
 	color: #FFFFFF;
 }
 
 .kabuki-edition, 
-.card:hover .kabuki-edition-hover {
+.card:hover .kabuki-edition-hover,
+.card.is-expanded .card__inner.kabuki-edition-hover {
 	background-color: #000000;
 	color: #FFFFFF;
 }
 
 .iro, 
-.card:hover .iro-hover {
+.card:hover .iro-hover,
+.card.is-expanded .card__inner.iro-hover {
 	background-color: #b27a7a;
 }
 
 .soc, 
-.card:hover .soc-hover {
+.card:hover .soc-hover,
+.card.is-expanded .card__inner.soc-hover {
 	background-color: #b69f1e;
 	color: #FFFFFF;
 }
@@ -165,9 +183,9 @@
   margin-top: 0;
   opacity: 0;
 }
-.card.is-expanded .card__inner {
+/*.card.is-expanded .card__inner.original-series-hover {
   background-color: #1abc9c;
-}
+}*/
 .card.is-expanded .card__inner:after {
   content: "";
   opacity: 1;
