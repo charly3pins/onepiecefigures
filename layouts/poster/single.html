@@ -7,11 +7,11 @@
         <div class="cards">
           {{ range $i, $item := $.Site.Data.items.items }}
             <div class=" card [ is-collapsed ] ">
-              <div class="card__inner [ js-expander ] {{.class}}-hover">
-                <img src="{{.thumb}}" alt="{{.alt}}"/>
+              <div class="card__inner [ js-expander ] {{.class}}-hover" id="fig-{{$i}}" onclick="window.location.hash='figf-{{$i}}';">
+                  <img src="{{.thumb}}" alt="{{.alt}}"/>
               </div>
-              <div class="card__expander">
-                <i class="fa fa-close [ js-collapser ]"></i>
+              <div class="card__expander" id="figf-{{$i}}">
+                <i class="fa fa-close [ js-collapser ]" onclick="window.location.hash='fig-{{$i}}';"></i>
                 <div class="card__expander-inner">
                   <div class="card__expander-fullimg">
                     <img src="{{.image}}" alt={{.alt}}>
