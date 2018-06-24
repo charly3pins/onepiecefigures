@@ -15,20 +15,6 @@ metaDataFormat = "yaml"
   socialShare = true
   posterbuttontext = "View figure details"
 
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-# [[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#  # position: see values of CSS background-position.
-#  position = "center top"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
-[[Params.bigimg]]
-  src = "images/home.png"
-
 [Author]
   name = "Charly3Pins & ucles83"
   #website = "yourwebsite.com"
@@ -55,18 +41,18 @@ metaDataFormat = "yaml"
   #telegram = "username"
 
 [[menu.main]]
-    name = "Blog"
-    url = ""
+    name = "Collection"
+    url = "collection"
     weight = 1
 
 [[menu.main]]
     name = "Poster"
-    url = "page/poster/"
+    url = "poster"
     weight = 2
 
 [[menu.main]]
     name = "About"
-    url = "page/about/"
+    url = "about"
     weight = 3
 
 [[menu.main]]
