@@ -2,8 +2,6 @@ baseURL = "https://charly3pins.github.io/onepiecefigures/"
 DefaultContentLanguage = "en"
 title = "Portrait of Pirates - The final guide of figures"
 metaDataFormat = "yaml"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
 
 [Params]
   homeTitle = " "
@@ -15,7 +13,6 @@ metaDataFormat = "yaml"
   comments = true
   readingTime = true
   socialShare = true
-  # Preview container button text
   posterbuttontext = "View figure details"
 
 #[[Params.bigimg]]
