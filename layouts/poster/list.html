@@ -3,62 +3,85 @@
   {{ partial "head.html" . }}
   <body>
     {{ partial "nav.html" . }}
-      
-    <header class="header-section ">
-      <div class="intro-header no-img">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-              <div class="page-heading">
-                <h1>{{ .Title }}</h1>
-                <hr class="small">
-              </div>
-
-              <div class="well">
-                {{ .Content }}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </header>
+    	
+		<header class="header-section ">
+			<div class="intro-header no-img">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+							<div class="page-heading">
+								<h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+								<hr class="small">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
   
-    <div class="container" role="main">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <div class="cards">
-            {{ range $i, $item := $.Site.Data.items.items }}
-              <div class=" card [ is-collapsed ] ">
-                <div class="card__inner [ js-expander ] {{.class}}-hover" id="fig-{{$i}}" onclick="window.location.hash='figf-{{$i}}';">
-                    <img src="{{.thumb}}" alt="{{.alt}}"/>
-                </div>
-                <div class="card__expander" id="figf-{{$i}}">
-                  <i class="fa fa-close [ js-collapser ]" onclick="window.location.hash='fig-{{$i}}';"></i>
-                  <div class="card__expander-inner">
-                    <div class="card__expander-fullimg">
-                      <img src="{{.image}}" alt={{.alt}}>
-                    </div>
-                    <div class="card__expander-details">
-                      <h3>{{.name}}</h3>
-                      <p><b>Character:</b> {{.character}}</p>
-                      <p><b>Category:</b> {{.category}} {{.subcategory}}</p>
-                      <p><b>Sculptor:</b> {{.sculptor}}</p>
-                      <p><b>Official Price:</b> {{.officialprice}}</p>
-                      <p><b>Release Date:</b> {{.releasedate}}</p>
-                      <a href="{{.url}}" target="_blank">{{ $.Site.Params.posterbuttontext }}</a>
-                    </div>
-                  </div>
-                </div>
-              </div>         
-            {{ end }}
-          </div>
-        </div>
-      </div>
-    </div>
+	      <div class="container" role="main">
+		    <div class="row">
+		      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		        {{ with .Content }}
+		          <div class="well">
+		            {{.}}
+		          </div>
+		        {{ end }}
+				<div class="cards">
+				{{ range $i, $item := .Paginator.Pages.ByParam "number" }}
+				  <div class="card [ is-collapsed ] ">
+				    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{$i}}" onclick="window.location.hash='figf-{{$i}}';">
+				        <img src="{{.Params.thumb}}" alt="{{.Params.alt}}"/>
+				    </div>
+				    <div class="card__expander" id="figf-{{$i}}">
+				      <i class="fa fa-close [ js-collapser ]" onclick="window.location.hash='fig-{{$i}}';"></i>
+				      <div class="card__expander-inner">
+				        <div class="card__expander-fullimg">
+				          <img src="{{.Params.image}}" alt={{.Params.alt}}>
+				        </div>
+				        <div class="card__expander-details">
+				          <h3>{{.Params.name}}</h3>
+				          <p><b>Character:</b> {{.Params.character}}</p>
+				          <p><b>Category:</b> {{.Params.category}} {{.Params.subcategory}}</p>
+				          <p><b>Sculptor:</b> {{.Params.sculptor}}</p>
+				          <p><b>Official Price:</b> {{.Params.officialprice}}</p>
+				          <p><b>Release Date:</b> {{.Params.releasedate}}</p>
+				          <a href="{{.Params.url}}" target="_blank">{{ $.Site.Params.posterbuttontext }}</a>
+				        </div>
+				      </div>
+				    </div>
+				  </div>
+				{{ end }}
+				</div>
+		        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		          <ul class="pager main-pager">
+		            {{ if .Paginator.HasPrev }}
+		              <li class="previous">
+		                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+		              </li>
+		            {{ end }}
+		            {{ if .Paginator.HasNext }}
+		              <li class="next">
+		                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+		              </li>
+		            {{ end }}
+		          </ul>
+		        {{ end }}
+		      </div>
+		    </div>
+		  </div>
 
     {{ partial "footer.html" . }}
-
+    
+	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
     <script>
+      $('.cards').infiniteScroll({
+        // options
+        path: '.next > a',
+        append: '.card',
+        history: false,
+      });
+
       var $cell = $('.card');
 
       //open and close card when clicked on card
@@ -91,5 +114,6 @@
         $cell.not($thisCell).removeClass('is-inactive');
       });
     </script>
+    
   </body>
 </html>
