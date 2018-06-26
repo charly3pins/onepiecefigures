@@ -690,5 +690,16 @@ Box size: 30.2 x 17.8 x 24.5 (cm)</p>
     </div>
   </div>
 </footer>
+    
+	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+    <script>
+      $('.posts-list').infiniteScroll({
+        
+        path: '.next > a',
+        append: '.post-preview',
+        history: false,
+      });
+    </script>
+    
   </body>
 </html>

@@ -690,5 +690,16 @@ Bonus: La fecha de release inicialmente era 09/2010. Se retrasó a 10&frasl;2010
     </div>
   </div>
 </footer>
+    
+	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+    <script>
+      $('.posts-list').infiniteScroll({
+        
+        path: '.next > a',
+        append: '.post-preview',
+        history: false,
+      });
+    </script>
+    
   </body>
 </html>
