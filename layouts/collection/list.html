@@ -77,5 +77,16 @@
 		  </div>
 
     {{ partial "footer.html" . }}
+    
+	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+    <script>
+      $('.posts-list').infiniteScroll({
+        // options
+        path: '.next > a',
+        append: '.post-preview',
+        history: false,
+      });
+    </script>
+    
   </body>
 </html>
