@@ -27,7 +27,7 @@
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
           <div class="cards">
-            {{ range $i, $item := $.Site.Data.items.items }}
+            {{ range $i, $item := .Paginator.Pages.ByParam "number" }}
               <div class="card [ is-collapsed ] ">
                 <div class="card__inner [ js-expander ] {{.class}}-hover" id="fig-{{$i}}" onclick="window.location.hash='figf-{{$i}}';">
                     <img src="{{.thumb}}" alt="{{.alt}}"/>
