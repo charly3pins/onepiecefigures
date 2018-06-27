@@ -28,7 +28,7 @@
 		          </div>
 		        {{ end }}
 				<div class="cards">
-				  {{ range $i, $item := .Paginator.Pages.ByParam "number" }}
+					{{ range $i, $item :=  .Paginator.Pages }}
 				  <div class="card [ is-collapsed ] ">
 				    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{.Params.number}}" 
 				    	onclick="expand(event,{{.Params.number}});">
