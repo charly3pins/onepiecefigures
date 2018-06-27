@@ -28,13 +28,14 @@
 		          </div>
 		        {{ end }}
 				<div class="cards">
-				{{ range $i, $item := .Paginator.Pages.ByParam "number" }}
+				  {{ range $i, $item := .Paginator.Pages.ByParam "number" }}
 				  <div class="card [ is-collapsed ] ">
-				    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{$i}}" onclick="window.location.hash='figf-{{$i}}';">
+				    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{.Params.number}}" 
+				    	onclick="expand(event,{{.Params.number}});">
 				        <img src="{{.Params.thumb}}" alt="{{.Params.alt}}"/>
 				    </div>
-				    <div class="card__expander" id="figf-{{$i}}">
-				      <i class="fa fa-close [ js-collapser ]" onclick="window.location.hash='fig-{{$i}}';"></i>
+				    <div class="card__expander" id="figf-{{.Params.number}}">
+				      <i class="fa fa-close [ js-collapser ]" onclick="collapse(event,{{.Params.number}});"></i>	
 				      <div class="card__expander-inner">
 				        <div class="card__expander-fullimg">
 				          <img src="{{.Params.image}}" alt={{.Params.alt}}>
@@ -75,45 +76,45 @@
     
 	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
     <script>
-      $('.cards').infiniteScroll({
-        // options
+      var $container = $('.cards').infiniteScroll({
         path: '.next > a',
         append: '.card',
         history: false,
       });
 
-      var $cell = $('.card');
+      $container.on('append.infiniteScroll', function(event, response, path, items) {
+      	var $cells = $('.card');
+      	var exp = document.getElementsByClassName('is-expanded');
+		for(var i=0; i<items.length; i++) {
+			if(exp.length == 0) {
+				break;
+			}
+			items[i].className += "is-inactive";
+		}
+	  });
 
-      //open and close card when clicked on card
-      $cell.find('.js-expander').click(function() {
-
-        var $thisCell = $(this).closest('.card');
-
-        if ($thisCell.hasClass('is-collapsed')) {
-          $cell.not($thisCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
-          $thisCell.removeClass('is-collapsed').addClass('is-expanded');
-          
-          if ($cell.not($thisCell).hasClass('is-inactive')) {
-            //do nothing
-          } else {
-            $cell.not($thisCell).addClass('is-inactive');
-          }
-
+      function expand(event, number) {
+      	var $cells = $('.card');
+      	var $cardCell = $(event.target).closest('.card');
+      	if($cardCell.hasClass('is-collapsed')) {
+          $cells.not($cardCell).removeClass('is-expanded').addClass('is-collapsed').addClass('is-inactive');
+          $cardCell.removeClass('is-collapsed').removeClass('is-inactive').addClass('is-expanded');
+          window.location.hash = 'figf-' + number;
         } else {
-          $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-          $cell.not($thisCell).removeClass('is-inactive');
+          $cardCell.removeClass('is-expanded').addClass('is-collapsed');
+          $cells.not($cardCell).removeClass('is-inactive');
+          window.location.hash = 'fig-' + number;
         }
-      });
+      }
 
-      //close card when click on cross
-      $cell.find('.js-collapser').click(function() {
+	function collapse(event, number) {
+		var $cells = $('.card');
+		var $cardCell = $(event.target).closest('.card');
+		$cardCell.removeClass('is-expanded').addClass('is-collapsed');
+		$cells.not($cardCell).removeClass('is-inactive');
+		window.location.hash = 'fig-' + number;
+	}
 
-        var $thisCell = $(this).closest('.card');
-
-        $thisCell.removeClass('is-expanded').addClass('is-collapsed');
-        $cell.not($thisCell).removeClass('is-inactive');
-      });
     </script>
-    
   </body>
 </html>
