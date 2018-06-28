@@ -41,8 +41,8 @@ metaDataFormat = "yaml"
   #telegram = "username"
 
 [[menu.main]]
-    name = "Collection"
-    url = "collection"
+    name = "Blog"
+    url = "blog"
     weight = 1
 
 [[menu.main]]
