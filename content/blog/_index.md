@@ -1,5 +1,5 @@
 ---
-title: The BLog
+title: The Blog
 ---
 
 Los Portrait of Pirates (comúnmente denomidados por los fans con el acrónimo de P.O.P) son una serie de figuras de la casa Megahouse basadas en distintos personajes de One piece.

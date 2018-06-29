@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar"><i class="fa fa-bars"></i></button>
-      <a class="navbar-brand" href="{{ "" | absLangURL }}">{{ .Site.Title }}</a>
+      <a href="{{ "" | absLangURL }}"><span class="header-img"></span></a>
     </div>
 
     <div class="collapse navbar-collapse" id="main-navbar">
@@ -25,16 +25,5 @@
         {{ end }}
       </ul>
     </div>
-
-    <div class="avatar-container">
-      <div class="avatar-img-border">
-        {{ if isset .Site.Params "logo" }}
-          <a title="{{ .Site.Title }}" href="{{ "" | absLangURL }}">
-            <img class="avatar-img" src="{{ .Site.Params.logo | absURL }}" alt="{{ .Site.Title }}" />
-          </a>
-        {{ end }}
-      </div>
-    </div>
-
   </div>
 </nav>
