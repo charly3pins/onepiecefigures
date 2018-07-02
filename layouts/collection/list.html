@@ -47,7 +47,7 @@
 				          <p><b>Sculptor:</b> {{.Params.sculptor}}</p>
 				          <p><b>Official Price:</b> {{.Params.officialprice}}</p>
 				          <p><b>Release Date:</b> {{.Params.releasedate}}</p>
-				          <a href="{{.Permalink}}" target="_blank">{{ $.Site.Params.posterbuttontext }}</a>
+				          <a href="{{.Permalink}}">{{ $.Site.Params.posterbuttontext }}</a>
 				        </div>
 				      </div>
 				    </div>
@@ -58,12 +58,12 @@
 		          <ul class="pager main-pager">
 		            {{ if .Paginator.HasPrev }}
 		              <li class="previous">
-		                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+		                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/" style="display:none;">&larr; {{ i18n "newerPosts" }}</a>
 		              </li>
 		            {{ end }}
 		            {{ if .Paginator.HasNext }}
 		              <li class="next">
-		                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+		                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/" style="display:none;">{{ i18n "olderPosts" }} &rarr;</a>
 		              </li>
 		            {{ end }}
 		          </ul>
