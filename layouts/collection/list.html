@@ -4,73 +4,73 @@
   <body>
     {{ partial "header.html" . }}
     	
-		<header class="header-section ">
-			<div class="intro-header no-img">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-							<div class="page-heading">
-								<h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
-								<hr class="small">
-							</div>
+	<header class="header-section ">
+		<div class="intro-header no-img">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+						<div class="page-heading">
+							<h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+							<hr class="small">
 						</div>
 					</div>
 				</div>
 			</div>
-		</header>
+		</div>
+	</header>
   
-	      <div class="container" role="main">
-		    <div class="row">
-		      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-		        {{ with .Content }}
-		          <div class="well">
-		            {{.}}
-		          </div>
-		        {{ end }}
-				<div class="cards">
-					{{ range $i, $item :=  .Paginator.Pages }}
-				  <div class="card [ is-collapsed ] ">
-				    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{.Params.number}}" 
-				    	onclick="expand(event,{{.Params.number}});">
-				        <img src="{{.Params.thumb}}" alt="{{.Params.alt}}"/>
-				    </div>
-				    <div class="card__expander" id="figf-{{.Params.number}}">
-				      <i class="fa fa-close [ js-collapser ]" onclick="collapse(event,{{.Params.number}});"></i>	
-				      <div class="card__expander-inner">
-				        <div class="card__expander-fullimg">
-				          <img src="{{.Params.image}}" alt={{.Params.alt}}>
-				        </div>
-				        <div class="card__expander-details">
-				          <h3>{{.Params.name}}</h3>
-				          <p><b>Character:</b> {{.Params.character}}</p>
-				          <p><b>Category:</b> {{.Params.category}} {{.Params.subcategory}}</p>
-				          <p><b>Sculptor:</b> {{.Params.sculptor}}</p>
-				          <p><b>Official Price:</b> {{.Params.officialprice}}</p>
-				          <p><b>Release Date:</b> {{.Params.releasedate}}</p>
-				          <a href="{{.Permalink}}">{{ $.Site.Params.posterbuttontext }}</a>
-				        </div>
-				      </div>
-				    </div>
-				  </div>
-				{{ end }}
-				</div>
-		        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-		          <ul class="pager main-pager">
-		            {{ if .Paginator.HasPrev }}
-		              <li class="previous">
-		                <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/" style="display:none;">&larr; {{ i18n "newerPosts" }}</a>
-		              </li>
-		            {{ end }}
-		            {{ if .Paginator.HasNext }}
-		              <li class="next">
-		                <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/" style="display:none;">{{ i18n "olderPosts" }} &rarr;</a>
-		              </li>
-		            {{ end }}
-		          </ul>
-		        {{ end }}
+	<div class="container" role="main">
+		<div class="row">
+		  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		    {{ with .Content }}
+		      <div class="well">
+		        {{.}}
 		      </div>
-		    </div>
+		    {{ end }}
+			<div class="cards">
+				{{ range $i, $item :=  .Paginator.Pages }}
+			  <div class="card [ is-collapsed ] ">
+			    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{.Params.number}}" 
+			    	onclick="expand(event,{{.Params.number}});">
+			        <img src="{{.Params.thumb}}" alt="{{.Params.alt}}"/>
+			    </div>
+			    <div class="card__expander" id="figf-{{.Params.number}}">
+			      <i class="fa fa-close [ js-collapser ]" onclick="collapse(event,{{.Params.number}});"></i>	
+			      <div class="card__expander-inner">
+			        <div class="card__expander-fullimg">
+			          <img src="{{.Params.image}}" alt={{.Params.alt}}>
+			        </div>
+			        <div class="card__expander-details">
+			          <h3>{{.Params.name}}</h3>
+			          <p><b>{{ i18n "character"}}:</b> {{.Params.character}}</p>
+			          <p><b>{{ i18n "category"}}:</b> {{.Params.category}} {{.Params.subcategory}}</p>
+			          <p><b>{{ i18n "sculptor"}}:</b> {{.Params.sculptor}}</p>
+			          <p><b>{{ i18n "officialPrice"}}:</b> {{.Params.officialprice}}</p>
+			          <p><b>{{ i18n "releaseDate"}}:</b> {{.Params.releasedate}}</p>
+			          <a href="{{.Permalink}}">{{ i18n "viewFigureDetails" }}</a>
+			        </div>
+			      </div>
+			    </div>
+			  </div>
+			{{ end }}
+			</div>
+		    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		      <ul class="pager main-pager">
+		        {{ if .Paginator.HasPrev }}
+		          <li class="previous">
+		            <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/" style="display:none;">&larr; {{ i18n "newerPosts" }}</a>
+		          </li>
+		        {{ end }}
+		        {{ if .Paginator.HasNext }}
+		          <li class="next">
+		            <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/" style="display:none;">{{ i18n "olderPosts" }} &rarr;</a>
+		          </li>
+		        {{ end }}
+		      </ul>
+		    {{ end }}
 		  </div>
+		</div>
+	</div>
 
     {{ partial "footer.html" . }}
     
@@ -114,7 +114,6 @@
 		$cells.not($cardCell).removeClass('is-inactive');
 		window.location.hash = 'fig-' + number;
 	}
-
     </script>
   </body>
 </html>

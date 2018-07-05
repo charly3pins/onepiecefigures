@@ -1,3 +1,21 @@
+# Menu
+- id: home
+  translation: "Home"
+- id: blog
+  translation: "Blog"
+- id: collection
+  translation: "Collection"
+- id: about
+  translation: "About"
+- id: tags
+  translation: "Tags"
+
+# Home
+- id: lastNews
+  translation: "Last news"
+- id: commingFigures
+  translation: "Comming figures"
+
 # Content
 - id: dateFormat
   translation: "January 2, 2006"
@@ -26,41 +44,24 @@
 - id: words
   translation: "words"
 
-
 # 404 page
 - id: pageNotFound
   translation: "Whoops, this page doesn't exist. Move along. (404 error)"
 
-# Footer
-- id: poweredBy # Accepts HTML
-  translation: '<a href="http://gohugo.io">Hugo v{{ .Hugo.Version }}</a> powered &nbsp;&bull;&nbsp; Theme by <a href="http://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a> adapted to <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a>'
+# Collection page
+- id: character
+  translation: "Character"
+- id: category
+  translation: "Category"
+- id: sculptor
+  translation: "Sculptor"
+- id: officialPrice
+  translation: "Official Price"
+- id: releaseDate
+  translation: "Release Date"
+- id: viewFigureDetails
+  translation: "View figure details"
 
-# Navigation
-- id: toggleNavigation
-  translation: "Toggle navigation"
-- id: languageSwitcherLabel
-  translation: "Language"
-- id: gcseLabelShort
-  translation: "Search"
-- id: gcseLabelLong
-  translation: "Search {{ .Site.Title }}"
-- id: gcseClose
-  translation: "Close"
-
-# Staticman
-- id: noComment
-  translation: "No comment"
-- id: oneComment
-  translation: "comment"
-- id: moreComment
-  translation: "comments"
-- id: useMarkdown
-  translation: "You can use Markdown syntax"
-- id: yourName
-  translation: "Your name"
-- id: yourEmail
-  translation: "Your email address"
-- id: yourWebsite
-  translation: "You website"
-
-
+# Tags page
+- id: viewAll
+  translation: "View all"

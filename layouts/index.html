@@ -8,7 +8,7 @@
     <div class="container">
       <div class="col-lg-12 col-md-12">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-          <h2>Last news</h2>
+          <h2>{{ i18n "lastNews" }}</h2>
           <div class="cards">
             {{range first 10 (where .Paginator.Pages ".Params.type" "blog")}}
             <div class="card">
@@ -20,9 +20,6 @@
                   </h4>
                 {{ end }}
               </a>
-              <p class="post-meta">
-                {{ partial "post_meta.html" . }}
-              </p>
               <div class="post-entry">
                 {{ .Render "summary"}}
               </div>
@@ -32,7 +29,7 @@
 
           <hr>
           
-          <h2>Comming figures</h2>
+          <h2>{{ i18n "CommingFigures" }}</h2>
           <div class="comming-figs">
             {{range where .Paginator.Pages ".Params.type" "comming"}}
             <div class="comming-fig">

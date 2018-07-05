@@ -1,7 +1,7 @@
 +++
 date = "2018-07-02"
-title = "Post 2 - ENGLISH"
-subtitle = "Example of second post"
+title = "Post 3"
+subtitle = "Example of third post"
 type = "blog"
 +++
 ¡Las podremos ver en el Wonder Festival 2018 [Summer]!

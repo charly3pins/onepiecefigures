@@ -27,6 +27,17 @@
               </div>
             {{ end }}
 
+            {{ if .IsTranslated }}
+            <h4>{{ i18n "translations" }}</h4>
+            <ul>
+                {{ range .Translations }}
+                <li>
+                    <a href="{{ .Permalink }}">{{ .Lang }}: {{ .Title }}</a>
+                </li>
+                {{ end}}
+            </ul>
+            {{ end }}
+
             {{ if .Site.Params.socialShare }}
                 <hr/>
                 <section id="social-share">
@@ -51,7 +62,6 @@
               {{ end }}
             </ul>
           {{ end }}
-
         </div>
       </div>
     </div>

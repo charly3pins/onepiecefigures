@@ -1,6 +1,6 @@
 +++
 date = "2018-07-02"
-title = "Post 2 - ENGLISH"
+title = "Post 2 - ESPAÑOL"
 subtitle = "Example of second post"
 type = "blog"
 +++
