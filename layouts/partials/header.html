@@ -12,6 +12,13 @@
 		<span><a title="About" href="{{ "about" | absLangURL }}">{{ i18n "about" }}</a></span>
 		<span class="separator">|</span>
 		<span><a title="Tags" href="{{ "tags" | absLangURL }}">{{ i18n "tags" }}</a></span>
+		{{ if gt (len .Site.Home.AllTranslations) 1 }}
+			<span class="separator">|</span>
+			{{ range .Site.Home.AllTranslations }}
+				<span><a href="{{ .Permalink }}"><img src="/onepiecefigures/{{ i18n .Language }}" width="20px" height="20px" style="display:inline;"></a></span>
+		    {{ end }}
+		{{ end }}
+		</span>
 	</div>
 </div>
 

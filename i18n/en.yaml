@@ -9,6 +9,10 @@
   translation: "About"
 - id: tags
   translation: "Tags"
+- id: en
+  translation: "/images/flags/united-kingdom.png"
+- id: es
+  translation: "/images/flags/spain.png"
 
 # Home
 - id: lastNews
