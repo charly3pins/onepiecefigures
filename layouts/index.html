@@ -1,64 +1,56 @@
-{{ define "main" }}
-  <div role="main" class="container">
-    <div class="row">
-      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-        {{ with .Content }}
-          <div class="well">
-            {{.}}
-          </div>
-        {{ end }}
-        <div class="posts-list">
-          {{ $pag := .Paginate (where .Data.Pages "Type" "post") }}
-          {{ range $pag.Pages }}
-            <article class="post-preview">
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+  
+  <body>
+    {{ partial "header.html" . }}
+
+    <div class="container">
+      <div class="col-lg-12 col-md-12">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <h2>{{ i18n "lastNews" }}</h2>
+          <div class="cards">
+            {{range first 10 (where .Paginator.Pages ".Params.type" "blog")}}
+            <div class="card">
               <a href="{{ .Permalink }}">
-                <h2 class="post-title">{{ .Title }}</h2>
+                <h3 class="post-title">{{ .Title }}</h3>
                 {{ if .Params.subtitle }}
-                  <h3 class="post-subtitle">
-                  {{ .Params.subtitle }}
-                  </h3>
-                {{ end }}
-                {{ if .Params.image }}
-                <img src="{{ .Params.image }}" class="img-title" />
+                  <h4 class="post-subtitle">
+                    {{ .Params.subtitle }}
+                  </h4>
                 {{ end }}
               </a>
-
-              {{ partial "post_meta.html" . }}
               <div class="post-entry">
-                {{ if .Truncated }}
-                  {{ .Summary }}
-                  <a href="{{ .Permalink }}" class="post-read-more">[{{ i18n "readMore" }}]</a>
-                {{ else }}
-                  {{ .Content }}
-                {{ end }}
+                {{ .Render "summary"}}
               </div>
+            </div>
+            {{ end }}
+          </div>
 
-              {{ if .Params.tags }}
-                <div class="blog-tags">
-                  {{ range .Params.tags }}
-                    <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
-                  {{ end }}
-                </div>
-              {{ end }}
-            </article>
-          {{ end }}
+          <hr>
+          
+          <h2>{{ i18n "CommingFigures" }}</h2>
+          <div class="comming-figs">
+            {{range where .Paginator.Pages ".Params.type" "comming"}}
+            <div class="comming-fig">
+              <div class="comming-fig-body text-center">
+                  <p>
+                    {{ if .Params.image }}
+                      <img class="img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
+                    {{ end }}
+                  </p>
+                  <h4 class="card-title">{{ .Title }}</h4>
+                  <p class="card-text">{{ .Params.releaseDate }}</p>
+              </div>
+            </div>
+            {{ end }}
+          </div>
         </div>
-
-        {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
-          <ul class="pager main-pager">
-            {{ if .Paginator.HasPrev }}
-              <li class="previous">
-                <a href="{{ .Paginator.Prev.URL | absURL }}">&larr; {{ i18n "newerPosts" }}</a>
-              </li>
-            {{ end }}
-            {{ if .Paginator.HasNext }}
-              <li class="next">
-                <a href="{{ .Paginator.Next.URL | absURL }}">{{ i18n "olderPosts" }} &rarr;</a>
-              </li>
-            {{ end }}
-          </ul>
-        {{ end }}
       </div>
     </div>
-  </div>
-{{ end }}
+
+    <br>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

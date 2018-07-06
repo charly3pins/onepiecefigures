@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+    	
+	<header class="header-section ">
+		<div class="intro-header no-img">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+						<div class="page-heading">
+							<h1>{{ .Title }}</h1>
+							<hr class="small">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="container" role="main">
+		<div class="row">
+		  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		    {{ with .Content }}
+		      <div class="well">
+		        {{.}}
+		      </div>
+		    {{ end }}
+		    <div class="posts-list">
+		      {{ range .Paginator.Pages }}
+		        <article class="post-preview">
+		          <a href="{{ .Permalink }}">
+		            <h2 class="post-title">{{ .Title }}</h2>
+		            {{ if .Params.subtitle }}
+		              <h3 class="post-subtitle">
+		                {{ .Params.subtitle }}
+		              </h3>
+		            {{ end }}
+		          </a>
+		          <p class="post-meta">
+		            {{ partial "post_meta.html" . }}
+		          </p>
+		          <div class="post-entry">
+		            {{ .Render "summary"}}
+		          </div>
+		          {{ if .Params.tags }}
+		            <div class="blog-tags">
+		              {{ range .Params.tags }}
+		                <a href="{{ $.Site.LanguagePrefix | absURL }}/tags/{{ . | urlize }}/">{{ . }}</a>&nbsp;
+		              {{ end }}
+		            </div>
+		          {{ end }}
+		        </article>
+		      {{ end }}
+		    </div>
+		    {{ if or (.Paginator.HasPrev) (.Paginator.HasNext) }}
+		      <ul class="pager main-pager">
+		        {{ if .Paginator.HasPrev }}
+		          <li class="previous">
+		            <a href="{{ .URL }}page/{{ .Paginator.Prev.PageNumber }}/">&larr; {{ i18n "newerPosts" }}</a>
+		          </li>
+		        {{ end }}
+		        {{ if .Paginator.HasNext }}
+		          <li class="next">
+		            <a href="{{ .URL }}page/{{ .Paginator.Next.PageNumber }}/">{{ i18n "olderPosts" }} &rarr;</a>
+		          </li>
+		        {{ end }}
+		      </ul>
+		    {{ end }}
+		  </div>
+		</div>
+	</div>
+
+    {{ partial "footer.html" . }}
+    
+	<script src="https://unpkg.com/infinite-scroll@3/dist/infinite-scroll.pkgd.min.js"></script>
+    <script>
+		$('.posts-list').infiniteScroll({
+			path: '.next > a',
+			append: '.post-preview',
+			history: false,
+		});
+    </script>
+    
+  </body>
+</html>

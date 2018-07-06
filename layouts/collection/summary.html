@@ -1,0 +1,8 @@
+<article class="post-summary">
+	<section class="post-excerpt">
+		<p>{{ .Summary }}</p>
+		{{ if .Truncated }}
+		<p><a class="read-more" href="{{.RelPermalink}}">{{ i18n "readMore" }} &raquo;</a></p>
+		{{ end }}
+	</section>
+</article>

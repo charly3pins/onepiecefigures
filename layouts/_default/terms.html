@@ -1,34 +1,55 @@
-{{ define "main" }}
-<div class="container" role="main">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
-    <article class="post-preview">
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-        {{ range $key, $value := .Data.Terms.ByCount }}
-          <div class="panel panel-default">
-            <div class="collapsed" role="button" data-toggle="collapse" data-target="#collapse-{{ $key }}" data-parent="#accordion"
-               href="#" aria-expanded="false" aria-controls="collapse-{{ $key }}">
-                <div class="panel-heading" role="tab" id="header-{{ $key }}">
-                  <h4 class="panel-title">
-                      {{ $value.Name }}
-                    <span class="badge">{{ $value.Count }}</span>
-                  </h4>
-                </div>
-            </div>
-            <div id="collapse-{{ $key }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{ $key }}">
-              <div class="panel-body">
-                <a href="{{ $.Site.LanguagePrefix | absURL }}{{ $.Data.Plural }}/{{ $value.Name | urlize }}/" class="list-group-item view-all">
-                View all</a>
-                <div class="list-group">
-                  {{ range $item := $value.WeightedPages }}
-                    <a href="{{$item.Permalink}}" class="list-group-item">{{ $item.Title }}</a>
-                  {{ end }}
-                </div>
+<!DOCTYPE html>
+<html lang="{{ .Lang }}">
+  {{ partial "head.html" . }}
+  <body>
+    {{ partial "header.html" . }}
+
+    <header class="header-section ">
+      <div class="intro-header no-img">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+              <div class="page-heading">
+                <h1>{{ i18n "tags" }}</h1>
+                <hr class="small">
               </div>
             </div>
           </div>
-        {{ end }}
+        </div>
       </div>
-    </article>
-  </div>
-</div>
-{{ end }}
+    </header>
+
+    <div class="container" role="main">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1"> 
+        <article class="post-preview">
+          <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            {{ range $key, $value := .Data.Terms.ByCount }}
+              <div class="panel panel-default">
+                <div class="collapsed" role="button" data-toggle="collapse" data-target="#collapse-{{ $key }}" data-parent="#accordion" href="#" aria-expanded="false" aria-controls="collapse-{{ $key }}">
+                    <div class="panel-heading" role="tab" id="header-{{ $key }}">
+                      <h4 class="panel-title">
+                          #{{ $value.Name }}
+                        <span class="badge">{{ $value.Count }}</span>
+                      </h4>
+                    </div>
+                </div>
+                <div id="collapse-{{ $key }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{ $key }}">
+                  <div class="panel-body">
+                    <a href="{{ $.Site.LanguagePrefix | absURL }}{{ $.Data.Plural }}/{{ $value.Name | urlize }}/" class="list-group-item view-all">{{ i18n "viewAll" }}</a>
+                    <div class="list-group">
+                      {{ range $item := $value.WeightedPages }}
+                        <a href="{{$item.Permalink}}" class="list-group-item">{{if $item.Title }}{{$item.Title}}{{else}}{{$item.Params.name}}{{end}}</a>
+                      {{ end }}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+    </div>
+
+    {{ partial "footer.html" . }}
+  </body>
+</html>

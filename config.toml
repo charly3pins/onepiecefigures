@@ -1,78 +1,19 @@
 baseURL = "https://charly3pins.github.io/onepiecefigures/"
 DefaultContentLanguage = "en"
-title = "Portrait of Pirates - The final guide of figures"
-metaDataFormat = "yaml"
-#disqusShortname = "XXX"
-#googleAnalytics = "XXX"
+
+[languages]
+  [languages.en]
+    title = "Portrait of Pirates - The final guide of figures"
+    weight = 1
+  [languages.es]
+    title = "Portrait of Pirates - La guia definitiva de las figuras"
+    weight = 2
 
 [Params]
   homeTitle = " "
-  #subtitle = "Build a beautiful and simple website in minutes"
-  #logo = "img/avatar-icon.png"
   favicon = "images/favicon.ico"
-  dateFormat = "January 2, 2006"
-  rss = true
-  comments = true
   readingTime = true
   socialShare = true
-  # Preview container button text
-  posterbuttontext = "View figure details"
-
-#[[Params.bigimg]]
-#  src = "img/triangle.jpg"
-#  desc = "Triangle"
-# [[Params.bigimg]]
-#  src = "img/sphere.jpg"
-#  desc = "Sphere"
-#  # position: see values of CSS background-position.
-#  position = "center top"
-#[[Params.bigimg]]
-#  src = "img/hexagon.jpg"
-#  desc = "Hexagon"
-[[Params.bigimg]]
-  src = "images/home.png"
 
 [Author]
   name = "Charly3Pins & ucles83"
-  #website = "yourwebsite.com"
-  #email = "youremail@domain.com"
-  facebook = "joseuclescollection/"
-  #googleplus = "+username" # or xxxxxxxxxxxxxxxxxxxxx
-  #github = "username"
-  #gitlab = "username"
-  #bitbucket = "username"
-  #twitter = "username"
-  #reddit = "username"
-  #linkedin = "username"
-  #xing = "username"
-  #stackoverflow = "users/XXXXXXX/username"
-  #snapchat = "username"
-  #instagram = "username"
-  #youtube = "user/username" # or channel/channelname
-  #soundcloud = "username"
-  #spotify = "username"
-  #bandcamp = "username"
-  #itchio = "username"
-  #vk = "username"
-  #paypal = "username"
-  #telegram = "username"
-
-[[menu.main]]
-    name = "Blog"
-    url = ""
-    weight = 1
-
-[[menu.main]]
-    name = "Poster"
-    url = "page/poster/"
-    weight = 2
-
-[[menu.main]]
-    name = "About"
-    url = "page/about/"
-    weight = 3
-
-[[menu.main]]
-    name = "Tags"
-    url = "tags"
-    weight = 4
