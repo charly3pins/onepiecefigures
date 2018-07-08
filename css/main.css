@@ -192,7 +192,7 @@ img {
 
 .pagename:after {
   background: transparent repeat;
-  background-image: url(/onepiecefigures/images/home-3.png);
+  background-image: url(/onepiecefigures/images/home.png);
   content: "";
   z-index: -2;
   left: 0px;
@@ -782,6 +782,9 @@ input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus, .gs
   -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   padding: 1.25rem;
+}
+.img-fluid {
+border-radius: 50%;
 }
 @media screen and (max-width: 991px) {
   .comming-fig {
