@@ -29,18 +29,18 @@
 
           <hr>
           
-          <h2>{{ i18n "CommingFigures" }}</h2>
+          <h2>{{ i18n "calendar" }}</h2>
           <div class="comming-figs">
-            {{range where .Paginator.Pages ".Params.type" "comming"}}
+            {{range .Site.Data.calendar.figures}}
             <div class="comming-fig">
               <div class="comming-fig-body text-center">
                   <p>
-                    {{ if .Params.image }}
-                      <img class="img-fluid" src="https://sunlimetech.com/portfolio/boot4menu/assets/imgs/team/img_01.png" alt="card image">
+                    {{ if .image }}
+                      <img class="img-fluid" src="{{.image}}" alt="{{.title}}">
                     {{ end }}
                   </p>
-                  <h4 class="card-title">{{ .Title }}</h4>
-                  <p class="card-text">{{ .Params.releaseDate }}</p>
+                  <h4 class="card-title">{{ .title }}</h4>
+                  <p class="card-text">{{ .releaseDate }}</p>
               </div>
             </div>
             {{ end }}
