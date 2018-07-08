@@ -17,8 +17,8 @@
 # Home
 - id: lastNews
   translation: "Últimas notícias"
-- id: commingFigures
-  translation: "Próximas figuras"
+- id: calendar
+  translation: "Calendario"
 
 # Content
 - id: dateFormat

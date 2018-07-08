@@ -17,8 +17,8 @@
 # Home
 - id: lastNews
   translation: "Last news"
-- id: commingFigures
-  translation: "Comming figures"
+- id: calendar
+  translation: "Calendar"
 
 # Content
 - id: dateFormat
