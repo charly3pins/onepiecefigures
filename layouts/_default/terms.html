@@ -35,7 +35,7 @@
                 </div>
                 <div id="collapse-{{ $key }}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading-{{ $key }}">
                   <div class="panel-body">
-                    <a href="{{ $.Site.LanguagePrefix | absURL }}{{ $.Data.Plural }}/{{ $value.Name | urlize }}/" class="list-group-item view-all">{{ i18n "viewAll" }}</a>
+                    <a href="{{ $.Site.LanguagePrefix | relURL }}/{{ $.Data.Plural }}/{{ $value.Name | urlize }}/" class="list-group-item view-all">{{ i18n "viewAll" }}</a>
                     <div class="list-group">
                       {{ range $item := $value.WeightedPages }}
                         <a href="{{$item.Permalink}}" class="list-group-item">{{if $item.Title }}{{$item.Title}}{{else}}{{$item.Params.name}}{{end}}</a>
