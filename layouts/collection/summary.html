@@ -1,8 +1,8 @@
 <article class="post-summary">
 	<section class="post-excerpt">
-		<p>{{ .Summary }}</p>
+		<p>{{ .Summary | safeHTML }}</p>
 		{{ if .Truncated }}
-		<p><a class="btn btn-default" href="{{.RelPermalink}}">{{ i18n "readMore" }} →</a></p>
+		<p><a class="btn btn-default" href="{{.RelPermalink}}">{{ i18n "readMore" }} &rarr;</a></p>
 		{{ end }}
 	</section>
 </article>

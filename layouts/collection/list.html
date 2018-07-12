@@ -10,7 +10,7 @@
 				<div class="row">
 					<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 						<div class="page-heading">
-							<h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+							<h1>{{ if .Data.Singular }}#{{ end }}{{ .Title | safeHTML }}</h1>
 							<hr class="small">
 						</div>
 					</div>
@@ -24,11 +24,11 @@
 		  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 		    {{ with .Content }}
 		      <div class="well">
-		        {{.}}
+		        {{. | safeHTML}}
 		      </div>
 		    {{ end }}
 			<div class="cards">
-				{{ range $i, $item :=  .Paginator.Pages }}
+				{{ range $i, $item := .Paginator.Pages }}
 			  <div class="card [ is-collapsed ] ">
 			    <div class="card__inner [ js-expander ] {{.Params.class}}-hover" id="fig-{{.Params.number}}" 
 			    	onclick="expand(event,{{.Params.number}});">
@@ -41,12 +41,12 @@
 			          <img src="{{.Params.image}}" alt={{.Params.alt}}>
 			        </div>
 			        <div class="card__expander-details">
-			          <h3>{{.Params.name}}</h3>
-			          <p><b>{{ i18n "character"}}:</b> {{.Params.character}}</p>
-			          <p><b>{{ i18n "category"}}:</b> {{.Params.category}} {{.Params.subcategory}}</p>
-			          <p><b>{{ i18n "sculptor"}}:</b> {{.Params.sculptor}}</p>
-			          <p><b>{{ i18n "officialPrice"}}:</b> {{.Params.officialprice}}</p>
-			          <p><b>{{ i18n "releaseDate"}}:</b> {{.Params.releasedate}}</p>
+			          <h3>{{.Params.name | safeHTML}}</h3>
+			          <p><b>{{ i18n "character"}}:</b> {{.Params.character | safeHTML}}</p>
+			          <p><b>{{ i18n "category"}}:</b> {{.Params.category | safeHTML}} {{.Params.subcategory}}</p>
+			          <p><b>{{ i18n "sculptor"}}:</b> {{.Params.sculptor | safeHTML}}</p>
+			          <p><b>{{ i18n "officialPrice"}}:</b> {{.Params.officialprice | safeHTML}}</p>
+			          <p><b>{{ i18n "releaseDate"}}:</b> {{.Params.releasedate | safeHTML}}</p>
 			          <a href="{{.Permalink}}">{{ i18n "viewFigureDetails" }}</a>
 			        </div>
 			      </div>

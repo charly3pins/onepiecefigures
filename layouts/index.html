@@ -13,10 +13,10 @@
             {{range first 10 (where .Paginator.Pages ".Params.type" "blog")}}
             <div class="card">
               <a href="{{ .Permalink }}">
-                <h3 class="post-title">{{ .Title }}</h3>
+                <h3 class="post-title">{{ .Title | safeHTML }}</h3>
                 {{ if .Params.subtitle }}
                   <h4 class="post-subtitle">
-                    {{ .Params.subtitle }}
+                    {{ .Params.subtitle | safeHTML }}
                   </h4>
                 {{ end }}
               </a>
@@ -39,8 +39,8 @@
                       <img class="img-fluid" src="{{.image}}" alt="{{.title}}">
                     {{ end }}
                   </p>
-                  <h4 class="card-title">{{ .title }}</h4>
-                  <p class="card-text">{{ .releaseDate }}</p>
+                  <h4 class="card-title">{{ .title | safeHTML }}</h4>
+                  <p class="card-text">{{ .releaseDate | safeHTML }}</p>
               </div>
             </div>
             {{ end }}

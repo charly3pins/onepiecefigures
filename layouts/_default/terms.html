@@ -28,7 +28,7 @@
                 <div class="collapsed" role="button" data-toggle="collapse" data-target="#collapse-{{ $key }}" data-parent="#accordion" href="#" aria-expanded="false" aria-controls="collapse-{{ $key }}">
                     <div class="panel-heading" role="tab" id="header-{{ $key }}">
                       <h4 class="panel-title">
-                          #{{ $value.Name }}
+                          #{{ $value.Name | safeHTML }}
                         <span class="badge">{{ $value.Count }}</span>
                       </h4>
                     </div>
@@ -38,7 +38,7 @@
                     <a href="{{ $.Site.LanguagePrefix | relURL }}/{{ $.Data.Plural }}/{{ $value.Name | urlize }}/" class="list-group-item view-all">{{ i18n "viewAll" }}</a>
                     <div class="list-group">
                       {{ range $item := $value.WeightedPages }}
-                        <a href="{{$item.Permalink}}" class="list-group-item">{{if $item.Title }}{{$item.Title}}{{else}}{{$item.Params.name}}{{end}}</a>
+                        <a href="{{$item.Permalink}}" class="list-group-item">{{if $item.Title }}{{$item.Title | safeHTML}}{{else}}{{$item.Params.name | safeHTML}}{{end}}</a>
                       {{ end }}
                     </div>
                   </div>
